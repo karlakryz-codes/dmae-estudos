@@ -1,0 +1,10 @@
+{
+  "name":"DMAE Estudos",
+  "short_name":"DMAE Estudos",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#f4f6fb",
+  "theme_color":"#3157d5",
+  "description":"Apostila online de Língua Portuguesa para o concurso do DMAE Uberlândia.",
+  "icons":[{"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

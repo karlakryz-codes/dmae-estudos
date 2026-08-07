@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#3157d5" />
+  <meta name="description" content="DMAE Estudos — apostila online de Língua Portuguesa organizada por capítulos." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>DMAE Estudos — Língua Portuguesa</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Capítulos">
+      <div class="brand">
+        <div class="brand-mark">D</div>
+        <div><strong>DMAE Estudos</strong><span>Língua Portuguesa</span></div>
+      </div>
+
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Buscar capítulo..." autocomplete="off" />
+      </label>
+
+      <div class="progress-card">
+        <div class="progress-line"><span>Seu progresso</span><strong id="progressText">0%</strong></div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <small id="progressDetail">0 de 15 capítulos concluídos</small>
+      </div>
+
+      <nav id="chapterList" class="chapter-list"></nav>
+      <footer class="sidebar-footer">Conteúdo original da apostila ICL, sem reescrita.</footer>
+    </aside>
+
+    <div class="scrim" id="scrim"></div>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-btn mobile-only" id="menuBtn" aria-label="Abrir menu">☰</button>
+        <div class="current-title">
+          <span id="chapterNumber">Capítulo 01</span>
+          <strong id="chapterTitle">Compreensão e interpretação de textos</strong>
+        </div>
+        <div class="toolbar">
+          <button class="icon-btn" id="fontDown" title="Diminuir fonte" aria-label="Diminuir fonte">A−</button>
+          <button class="icon-btn" id="fontUp" title="Aumentar fonte" aria-label="Aumentar fonte">A+</button>
+          <button class="icon-btn" id="themeBtn" title="Alternar modo escuro" aria-label="Alternar modo escuro">☾</button>
+        </div>
+      </header>
+
+      <section class="welcome" id="welcomeBanner">
+        <div>
+          <span class="eyebrow">Apostila online</span>
+          <h1>Estude Português por capítulos</h1>
+          <p>As páginas são exibidas exatamente como no PDF original. A organização acontece somente na navegação.</p>
+        </div>
+        <button class="primary-btn" id="continueBtn">Continuar de onde parei</button>
+      </section>
+
+      <section class="reader-card">
+        <div class="reader-header">
+          <div>
+            <span class="eyebrow" id="readerPages">Páginas 250–258</span>
+            <h2 id="readerTitle">Compreensão e interpretação de textos</h2>
+          </div>
+          <div class="reader-actions">
+            <button class="secondary-btn" id="openPdfBtn">Abrir PDF completo</button>
+            <button class="complete-btn" id="completeBtn">Marcar como concluído</button>
+          </div>
+        </div>
+
+        <div class="pdf-wrap">
+          <iframe id="pdfFrame" title="Leitor da apostila ICL" loading="eager"></iframe>
+          <div class="pdf-fallback">
+            Caso o PDF não apareça, <a id="fallbackLink" href="#">toque aqui para abrir o capítulo</a>.
+          </div>
+        </div>
+
+        <div class="chapter-nav">
+          <button class="secondary-btn" id="prevBtn">← Anterior</button>
+          <button class="secondary-btn" id="nextBtn">Próximo →</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
